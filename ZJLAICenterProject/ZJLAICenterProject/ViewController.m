@@ -37,7 +37,7 @@
 //    }];
     
     // 初始化客户端
-    DeepSeekStreamClient *client = [[DeepSeekStreamClient alloc] initWithAPIKey:@"sk-a842a8022ae24988a21280ecf0ef95c4"];
+    DeepSeekStreamClient *client = [[DeepSeekStreamClient alloc] initWithAPIKey:@""];
 
     // 启动流式请求
     [client startStreamWithPrompt:@"你好，请写一首关于春天的诗"];
