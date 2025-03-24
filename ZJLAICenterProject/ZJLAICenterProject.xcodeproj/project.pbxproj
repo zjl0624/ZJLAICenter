@@ -16,6 +16,7 @@
 		14C0AD982D9144AC0033AE30 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C0AD8F2D9144AC0033AE30 /* ViewController.m */; };
 		14C0AD9C2D9144D80033AE30 /* DeepSeekClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C0AD9B2D9144D80033AE30 /* DeepSeekClient.m */; };
 		14C0AD9F2D9147C50033AE30 /* DeepSeekStreamClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C0AD9E2D9147C50033AE30 /* DeepSeekStreamClient.m */; };
+		14C0ADA22D9154480033AE30 /* ConfigureHtmlContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 14C0ADA12D9154480033AE30 /* ConfigureHtmlContent.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		14C0AD9B2D9144D80033AE30 /* DeepSeekClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeepSeekClient.m; sourceTree = "<group>"; };
 		14C0AD9D2D9147C50033AE30 /* DeepSeekStreamClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeepSeekStreamClient.h; sourceTree = "<group>"; };
 		14C0AD9E2D9147C50033AE30 /* DeepSeekStreamClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeepSeekStreamClient.m; sourceTree = "<group>"; };
+		14C0ADA02D9154480033AE30 /* ConfigureHtmlContent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConfigureHtmlContent.h; sourceTree = "<group>"; };
+		14C0ADA12D9154480033AE30 /* ConfigureHtmlContent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConfigureHtmlContent.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +93,8 @@
 				14C0AD9B2D9144D80033AE30 /* DeepSeekClient.m */,
 				14C0AD9D2D9147C50033AE30 /* DeepSeekStreamClient.h */,
 				14C0AD9E2D9147C50033AE30 /* DeepSeekStreamClient.m */,
+				14C0ADA02D9154480033AE30 /* ConfigureHtmlContent.h */,
+				14C0ADA12D9154480033AE30 /* ConfigureHtmlContent.m */,
 			);
 			path = ZJLAICenter;
 			sourceTree = "<group>";
@@ -168,6 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				14C0AD952D9144AC0033AE30 /* AppDelegate.m in Sources */,
+				14C0ADA22D9154480033AE30 /* ConfigureHtmlContent.m in Sources */,
 				14C0AD962D9144AC0033AE30 /* main.m in Sources */,
 				14C0AD972D9144AC0033AE30 /* SceneDelegate.m in Sources */,
 				14C0AD9C2D9144D80033AE30 /* DeepSeekClient.m in Sources */,

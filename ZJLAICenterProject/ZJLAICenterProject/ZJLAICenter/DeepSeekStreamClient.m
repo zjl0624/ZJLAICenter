@@ -33,7 +33,7 @@
     // 构建流式请求体（网页2的参数结构）
     NSDictionary *body = @{
         @"model": @"deepseek-reasoner",
-        @"messages": @[@{@"role":@"user", @"content":prompt}],
+        @"messages": @[@{@"role":@"system",@"content":@"要求返回的reasoning_content和content里面的内容，是带有html标签和格式的"},@{@"role":@"user", @"content":prompt}],
         @"stream": @YES,
         @"temperature": @0.7
 //        @"extra_body":@{@"return_reasoning":@(YES)}
@@ -71,6 +71,7 @@
                     if ([reasoning isKindOfClass:[NSNull class]]) {
                         
                     }else {
+                        self.streamHandler(reasoning,@"", nil);
                         NSLog(@"reasoning：%@",reasoning);
                     }
                     
@@ -80,7 +81,7 @@
                     if ([content isKindOfClass:[NSNull class]]) {
                         
                     }else {
-                        self.streamHandler(content, nil);
+                        self.streamHandler(@"",content, nil);
                         NSLog(@"content：%@",content);
                     }
 
@@ -100,7 +101,7 @@ didCompleteWithError:(NSError *)error {
     if (error.code == NSURLErrorCancelled) {
         NSLog(@"流式连接已被主动终止");
     } else if (error) {
-        self.streamHandler(nil, error);
+        self.streamHandler(nil,nil, error);
     }
     self.responseData = nil;
 }
@@ -114,7 +115,7 @@ didCompleteWithError:(NSError *)error {
  completionHandler:(void (^)(NSURLSessionResponseDisposition))completionHandler {
     if (self.responseData.length > MAX_BUFFER_SIZE) {
         [dataTask cancel];
-        self.streamHandler(nil, [NSError errorWithDomain:@"BufferOverflow"
+        self.streamHandler(nil, nil,[NSError errorWithDomain:@"BufferOverflow"
                                                   code:-1
                                               userInfo:nil]);
     }
