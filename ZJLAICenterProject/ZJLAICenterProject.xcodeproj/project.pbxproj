@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		146955252D92824000166B85 /* MMParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 146955202D92824000166B85 /* MMParser.m */; };
+		146955262D92824000166B85 /* MMScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 146955222D92824000166B85 /* MMScanner.m */; };
+		146955272D92824000166B85 /* MMMarkdown.m in Sources */ = {isa = PBXBuildFile; fileRef = 1469551D2D92824000166B85 /* MMMarkdown.m */; };
+		146955282D92824000166B85 /* MMDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 146955142D92824000166B85 /* MMDocument.m */; };
+		146955292D92824000166B85 /* MMGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 146955192D92824000166B85 /* MMGenerator.m */; };
+		1469552A2D92824000166B85 /* MMSpanParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 146955242D92824000166B85 /* MMSpanParser.m */; };
+		1469552B2D92824000166B85 /* MMHTMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 1469551B2D92824000166B85 /* MMHTMLParser.m */; };
+		1469552C2D92824000166B85 /* MMElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 146955172D92824000166B85 /* MMElement.m */; };
 		14C0AD912D9144AC0033AE30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14C0AD852D9144AC0033AE30 /* Assets.xcassets */; };
 		14C0AD932D9144AC0033AE30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14C0AD882D9144AC0033AE30 /* LaunchScreen.storyboard */; };
 		14C0AD942D9144AC0033AE30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14C0AD8B2D9144AC0033AE30 /* Main.storyboard */; };
@@ -20,6 +28,24 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		146955132D92824000166B85 /* MMDocument.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMDocument.h; sourceTree = "<group>"; };
+		146955142D92824000166B85 /* MMDocument.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMDocument.m; sourceTree = "<group>"; };
+		146955152D92824000166B85 /* MMDocument_Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMDocument_Private.h; sourceTree = "<group>"; };
+		146955162D92824000166B85 /* MMElement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMElement.h; sourceTree = "<group>"; };
+		146955172D92824000166B85 /* MMElement.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMElement.m; sourceTree = "<group>"; };
+		146955182D92824000166B85 /* MMGenerator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMGenerator.h; sourceTree = "<group>"; };
+		146955192D92824000166B85 /* MMGenerator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMGenerator.m; sourceTree = "<group>"; };
+		1469551A2D92824000166B85 /* MMHTMLParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMHTMLParser.h; sourceTree = "<group>"; };
+		1469551B2D92824000166B85 /* MMHTMLParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMHTMLParser.m; sourceTree = "<group>"; };
+		1469551C2D92824000166B85 /* MMMarkdown.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMMarkdown.h; sourceTree = "<group>"; };
+		1469551D2D92824000166B85 /* MMMarkdown.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMMarkdown.m; sourceTree = "<group>"; };
+		1469551E2D92824000166B85 /* MMMarkdown-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MMMarkdown-Prefix.pch"; sourceTree = "<group>"; };
+		1469551F2D92824000166B85 /* MMParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMParser.h; sourceTree = "<group>"; };
+		146955202D92824000166B85 /* MMParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMParser.m; sourceTree = "<group>"; };
+		146955212D92824000166B85 /* MMScanner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMScanner.h; sourceTree = "<group>"; };
+		146955222D92824000166B85 /* MMScanner.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMScanner.m; sourceTree = "<group>"; };
+		146955232D92824000166B85 /* MMSpanParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMSpanParser.h; sourceTree = "<group>"; };
+		146955242D92824000166B85 /* MMSpanParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMSpanParser.m; sourceTree = "<group>"; };
 		14C0AD652D9143FD0033AE30 /* ZJLAICenterProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZJLAICenterProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14C0AD832D9144AC0033AE30 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		14C0AD842D9144AC0033AE30 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -51,6 +77,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		146955122D92822700166B85 /* MMMarkdown */ = {
+			isa = PBXGroup;
+			children = (
+				146955132D92824000166B85 /* MMDocument.h */,
+				146955142D92824000166B85 /* MMDocument.m */,
+				146955152D92824000166B85 /* MMDocument_Private.h */,
+				146955162D92824000166B85 /* MMElement.h */,
+				146955172D92824000166B85 /* MMElement.m */,
+				146955182D92824000166B85 /* MMGenerator.h */,
+				146955192D92824000166B85 /* MMGenerator.m */,
+				1469551A2D92824000166B85 /* MMHTMLParser.h */,
+				1469551B2D92824000166B85 /* MMHTMLParser.m */,
+				1469551C2D92824000166B85 /* MMMarkdown.h */,
+				1469551D2D92824000166B85 /* MMMarkdown.m */,
+				1469551E2D92824000166B85 /* MMMarkdown-Prefix.pch */,
+				1469551F2D92824000166B85 /* MMParser.h */,
+				146955202D92824000166B85 /* MMParser.m */,
+				146955212D92824000166B85 /* MMScanner.h */,
+				146955222D92824000166B85 /* MMScanner.m */,
+				146955232D92824000166B85 /* MMSpanParser.h */,
+				146955242D92824000166B85 /* MMSpanParser.m */,
+			);
+			path = MMMarkdown;
+			sourceTree = "<group>";
+		};
 		14C0AD5C2D9143FD0033AE30 = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +140,7 @@
 		14C0AD992D9144B00033AE30 /* ZJLAICenter */ = {
 			isa = PBXGroup;
 			children = (
+				146955122D92822700166B85 /* MMMarkdown */,
 				14C0AD9A2D9144D80033AE30 /* DeepSeekClient.h */,
 				14C0AD9B2D9144D80033AE30 /* DeepSeekClient.m */,
 				14C0AD9D2D9147C50033AE30 /* DeepSeekStreamClient.h */,
@@ -176,6 +228,14 @@
 				14C0ADA22D9154480033AE30 /* ConfigureHtmlContent.m in Sources */,
 				14C0AD962D9144AC0033AE30 /* main.m in Sources */,
 				14C0AD972D9144AC0033AE30 /* SceneDelegate.m in Sources */,
+				146955252D92824000166B85 /* MMParser.m in Sources */,
+				146955262D92824000166B85 /* MMScanner.m in Sources */,
+				146955272D92824000166B85 /* MMMarkdown.m in Sources */,
+				146955282D92824000166B85 /* MMDocument.m in Sources */,
+				146955292D92824000166B85 /* MMGenerator.m in Sources */,
+				1469552A2D92824000166B85 /* MMSpanParser.m in Sources */,
+				1469552B2D92824000166B85 /* MMHTMLParser.m in Sources */,
+				1469552C2D92824000166B85 /* MMElement.m in Sources */,
 				14C0AD9C2D9144D80033AE30 /* DeepSeekClient.m in Sources */,
 				14C0AD9F2D9147C50033AE30 /* DeepSeekStreamClient.m in Sources */,
 				14C0AD982D9144AC0033AE30 /* ViewController.m in Sources */,
@@ -213,6 +273,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Z775HF852Q;
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/ZJLAICenterProject/MarkdownKit/Sources";
 				INFOPLIST_FILE = ZJLAICenterProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -225,9 +286,12 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = ZJL.ZJLAICenterProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "ZJLAICenterProject/ZJLAICenterProject-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -241,6 +305,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Z775HF852Q;
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/ZJLAICenterProject/MarkdownKit/Sources";
 				INFOPLIST_FILE = ZJLAICenterProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -253,9 +318,12 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = ZJL.ZJLAICenterProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "ZJLAICenterProject/ZJLAICenterProject-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

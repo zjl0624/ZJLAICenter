@@ -9,7 +9,7 @@
 #import "DeepSeekClient.h"
 #import "DeepSeekStreamClient.h"
 #import "ConfigureHtmlContent.h"
-
+#import "MMMarkdown/MMMarkdown.h"
 @interface ViewController ()
 @property (nonatomic,strong) NSString *text;
 @property (nonatomic,strong) UITextView *textView;
@@ -37,7 +37,7 @@
 //    }];
     
     // 初始化客户端
-    DeepSeekStreamClient *client = [[DeepSeekStreamClient alloc] initWithAPIKey:@""];
+    DeepSeekStreamClient *client = [[DeepSeekStreamClient alloc] initWithAPIKey:@"sk-a842a8022ae24988a21280ecf0ef95c4"];
 
     // 启动流式请求
     [client startStreamWithPrompt:@"介绍成都医护邦信息科技有限公司"];
@@ -50,8 +50,10 @@
                 _text = [NSString stringWithFormat:@"%@%@",_text,content];
 
             }
-//            _textView.attributedText = [[[ConfigureHtmlContent alloc] init] attributedStringFromHTML:_text];
-            _textView.text = _text;
+            NSError *error;
+            NSString *html = [MMMarkdown HTMLStringWithMarkdown:_text error:&error];
+            _textView.attributedText = [[[ConfigureHtmlContent alloc] init] attributedStringFromHTML:html];
+//            _textView.text = _text;
             [self.textView scrollRangeToVisible:NSMakeRange(self.textView.text.length, 0)];
 
         });
