@@ -33,7 +33,7 @@
     // 构建流式请求体（网页2的参数结构）
     NSDictionary *body = @{
         @"model": @"deepseek-reasoner",
-        @"messages": @[@{@"role":@"system",@"content":@"要求返回的reasoning_content和content里面的内容，是带有html标签和格式的"},@{@"role":@"user", @"content":prompt}],
+        @"messages": @[@{@"role":@"user", @"content":prompt}],
         @"stream": @YES,
         @"temperature": @0.7
 //        @"extra_body":@{@"return_reasoning":@(YES)}
@@ -54,10 +54,15 @@
     // 解析SSE格式数据（网页1的data: {...}格式）
     NSString *dataStr = [[NSString alloc] initWithData:self.responseData
                                              encoding:NSUTF8StringEncoding];
+    if ([dataStr containsString:@"[DONE]"]) {
+        NSLog(@"回答完成");
+        _streamFinish();
+    }
     NSArray *events = [dataStr componentsSeparatedByString:@"\n\n"];
     
     for (NSString *event in events) {
         if ([event hasPrefix:@"data: "]) {
+            
             NSString *jsonStr = [event substringFromIndex:6];
             NSData *jsonData = [jsonStr dataUsingEncoding:NSUTF8StringEncoding];
             
@@ -65,6 +70,7 @@
             NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:jsonData
                                                                 options:0
                                                                   error:&error];
+
             if (!error && dict[@"choices"]) {
                 NSString *reasoning = dict[@"choices"][0][@"delta"][@"reasoning_content"];
                 if (reasoning) {

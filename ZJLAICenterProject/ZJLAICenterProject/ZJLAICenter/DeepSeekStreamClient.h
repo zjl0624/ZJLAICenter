@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) NSURLSession *session;
 @property (nonatomic, copy) void (^streamHandler)(NSString *reasoning_content,NSString *content, NSError *error);
+@property (nonatomic, copy) void (^streamFinish)(void);
 @property (nonatomic, strong) NSMutableData *responseData;
 - (void)startStreamWithPrompt:(NSString *)prompt;
 - (instancetype)initWithAPIKey:(NSString *)apiKey;

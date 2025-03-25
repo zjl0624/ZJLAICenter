@@ -40,7 +40,7 @@
     DeepSeekStreamClient *client = [[DeepSeekStreamClient alloc] initWithAPIKey:@""];
 
     // 启动流式请求
-    [client startStreamWithPrompt:@"你好，请写一首关于春天的诗"];
+    [client startStreamWithPrompt:@"介绍成都医护邦信息科技有限公司"];
     client.streamHandler = ^(NSString * _Nonnull reasoning_content, NSString * _Nonnull content, NSError * _Nonnull error) {
         dispatch_async(dispatch_get_main_queue(), ^{
             if (reasoning_content.length > 0) {
@@ -50,11 +50,15 @@
                 _text = [NSString stringWithFormat:@"%@%@",_text,content];
 
             }
-            _textView.attributedText = [[[ConfigureHtmlContent alloc] init] attributedStringFromHTML:_text];
+//            _textView.attributedText = [[[ConfigureHtmlContent alloc] init] attributedStringFromHTML:_text];
+            _textView.text = _text;
             [self.textView scrollRangeToVisible:NSMakeRange(self.textView.text.length, 0)];
 
         });
 
+    };
+    client.streamFinish = ^{
+        
     };
 
 
